@@ -1,0 +1,56 @@
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+a {
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template: repeat(20, 100px) / repeat(12, 1fr);
+}
+
+header {
+    grid-area: 1 / 1 / span 1 / -1;
+    display: grid;
+    grid-template: 1fr / 1fr 30% 1fr;
+    background-color: aqua;
+    align-items: center;
+    justify-items: center;
+}
+
+header nav {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+header nav a {
+    display: inline-flex;
+    font-size: 1em;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+header .header-logo {
+    grid-area: 1 / 2 / 2 / 3;
+    flex-grow: 1;
+}
+
+header .buttons {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    width: 100%;
+    margin-right: 20px;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
