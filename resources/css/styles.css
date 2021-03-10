@@ -83,7 +83,7 @@ main {
 
 .banner {
     grid-area: 1 / 1 / span 4 / -1;
-    background-image: url('./resources/images/banner.jpg');
+    background-image: url('/resources/images/banner.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
