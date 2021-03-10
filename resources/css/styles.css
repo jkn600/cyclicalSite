@@ -16,7 +16,7 @@ header {
     width: 100%;
     grid-template-columns: 1fr 50% 1fr;
     background-color: #2e3192;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+    border-bottom: 1px solid #474BC5;
     align-items: center;
     justify-items: center;
     position: fixed;
@@ -85,7 +85,7 @@ main {
 
 .banner {
     grid-area: 1 / 1 / span 4 / -1;
-    background-image: url('/resources/images/banner.jpg');
+    background-image: url('./resources/images/banner.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
