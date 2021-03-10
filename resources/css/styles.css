@@ -1,156 +1,159 @@
 /* Universal Styles */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Baloo Tammudu 2', cursive !important;
-    background-color: black;
+  font-family: "Baloo Tammudu 2", cursive !important;
+  background-color: black;
 }
 
 /* Header Section */
 
 header {
-    display: grid;
-    height: 100px;
-    width: 100%;
-    grid-template-columns: 1fr 50% 1fr;
-    background-color: #2e3192;
-    border-bottom: 1px solid #474BC5;
-    align-items: center;
-    justify-items: center;
-    position: fixed;
-    z-index: 10;
+  display: grid;
+  height: 100px;
+  width: 100%;
+  grid-template-columns: 1fr 50% 1fr;
+  background-color: #2e3192;
+  border-bottom: 1px solid #474bc5;
+  align-items: center;
+  justify-items: center;
+  position: fixed;
+  z-index: 10;
 }
 
 header .header-logo {
-    grid-area: 1 / 1 / 2 / 2;
-    flex-grow: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  grid-area: 1 / 1 / 2 / 2;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 header .header-logo img {
-    width: auto;
-    height: 50px;
+  width: auto;
+  height: 50px;
 }
 
 header nav {
-    grid-area: 1 / 2 / 2 / 3;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-grow: 2;
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 2;
 }
 
 header nav a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 header .buttons {
-    grid-area: 1 / 3 / 2 / 4;
-    display: flex;
-    max-width: 100%;
-    margin-right: 20px;
-    flex-grow: 2;
-    justify-content: flex-end;
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  max-width: 100%;
+  margin-right: 20px;
+  flex-grow: 2;
+  justify-content: flex-end;
 }
 
 header .buttons button {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 @media only screen and (max-width: 768px) {
-    header nav a {
-        font-size: 1.25rem;
-    }
+  header nav a {
+    font-size: 1.25rem;
+  }
 }
 
 /* Main Content */
 
 main {
-    display: grid;
-    width: 100%;
-    padding-top: 100px;
-    grid-template:repeat(9, 100px) / repeat(12, 1fr);
+  display: grid;
+  width: 100%;
+  padding-top: 100px;
+  grid-template: repeat(9, 100px) / repeat(12, 1fr);
+  grid-column-gap: 10px;
+}
+
+@media only screen and (max-width: 620px) {
 }
 
 /* Banner Section */
 
 .banner {
-    grid-area: 1 / 1 / span 4 / -1;
-    background-image: url('./resources/images/banner.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
+  grid-area: 1 / 1 / span 4 / -1;
+  background-image: url("/resources/images/newbanner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Stats */
 
 .stats {
-    grid-area: 5 / 1 / span 1 / -1;
-    background-color: rgb(197, 223, 51);
+  grid-area: 5 / 1 / span 1 / -1;
+  background-color: rgb(197, 223, 51);
 }
 
 /* Info */
 
 .info {
-    grid-area: 6 / 1 / span 3 / -1;
-    display: grid;
-    grid-template-areas: "whoIs howTo";
-    grid-template-columns: 1fr 1fr;
+  grid-area: 6 / 1 / span 3 / -1;
+  display: grid;
+  grid-template-areas: "whoIs howTo";
+  grid-template-columns: 1fr 1fr;
 }
 
 .infoPanel {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 20px;
 }
 
 .infoPanel h1 {
-    font-size: 38px;
-    font-weight: 800;
+  font-size: 38px;
+  font-weight: 800;
 }
 
 .infoPanel p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 #whoIs {
-    grid-area: whoIs;
-    background-color: #2e3192;
-    color: white;
+  grid-area: whoIs;
+  background-color: #2e3192;
+  color: white;
 }
 
 #howTo {
-    grid-area: howTo;
-    background-color: white;
-    color: #2e3192; 
+  grid-area: howTo;
+  background-color: white;
+  color: #2e3192;
 }
 
 @media only screen and (max-width: 768px) {
-    .infoPanel h1 {
-        font-size: 5vw;
-    }
+  .infoPanel h1 {
+    font-size: 5vw;
+  }
 
-    .infoPanel p {
-        font-size: 14px;
-    }
+  .infoPanel p {
+    font-size: 14px;
+  }
 }
 
 /* Path */
 
-.path{
-    grid-area: 9 / 1 / span 1 / -1;
-    background-color: grey;
+.path {
+  grid-area: 9 / 1 / span 1 / -1;
+  background-color: grey;
 }
 
 /* ... */
