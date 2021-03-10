@@ -94,7 +94,7 @@ main {
 
 .stats {
     grid-area: 5 / 1 / span 1 / -1;
-    background-color: red;
+    background-color: rgb(197, 223, 51);
 }
 
 /* Info */
@@ -124,12 +124,14 @@ main {
 
 #whoIs {
     grid-area: whoIs;
-    background-color: yellow;
+    background-color: #2e3192;
+    color: white;
 }
 
 #howTo {
     grid-area: howTo;
-    background-color: orange; 
+    background-color: white;
+    color: #2e3192; 
 }
 
 @media only screen and (max-width: 768px) {
@@ -146,7 +148,7 @@ main {
 
 .path{
     grid-area: 9 / 1 / span 1 / -1;
-    background-color: turquoise;
+    background-color: grey;
 }
 
 /* ... */
