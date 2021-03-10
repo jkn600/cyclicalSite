@@ -3,8 +3,9 @@
     box-sizing: border-box;
 }
 
-body * {
+body {
     font-family: 'Baloo Tammudu 2', cursive !important;
+    background-color: black;
 }
 
 /* Header Section */
