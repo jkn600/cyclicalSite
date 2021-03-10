@@ -8,49 +8,71 @@ body {
   background-color: black;
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
 /* Header Section */
 
 header {
   display: grid;
   height: 100px;
   width: 100%;
-  grid-template-columns: 1fr 50% 1fr;
+  grid-template-columns: minmax(132.25px, 1fr) 50% minmax(132.25px, 1fr);
   background-color: #2e3192;
   border-bottom: 1px solid #474bc5;
   align-items: center;
   justify-items: center;
   position: fixed;
+  top: 0;
   z-index: 10;
 }
 
 header .header-logo {
   grid-area: 1 / 1 / 2 / 2;
-  flex-grow: 1;
+  flex-grow: 2;
   width: 100%;
+  margin-left: 20px;
   display: flex;
   justify-content: center;
 }
 
 header .header-logo img {
   width: auto;
-  height: 50px;
+  height: 3em;
 }
 
-header nav {
+.topNav {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
+  height: 90%;
   width: 100%;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  flex-grow: 2;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
-header nav a {
+.topNav a {
+  display: block;
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
-  margin: 0 10px;
+  color: rgb(216, 216, 216);
+  margin: 5px 10px 0 10px;
   text-decoration: none;
+}
+
+.topNav a:hover {
+  color: white;
+}
+
+.topNav a.active {
+  color: white;
+}
+
+.topNav .icon {
+  display: none;
 }
 
 header .buttons {
@@ -63,12 +85,51 @@ header .buttons {
 }
 
 header .buttons button {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 @media only screen and (max-width: 768px) {
-  header nav a {
+  .topNav a {
     font-size: 1.25rem;
+  }
+}
+
+/* When the screen is less than 630 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains should open and close the nav (.icon).
+The "responsive" class is added to the nav with JavaScript when
+the user clicks on the icon. This class makes the nav look good on
+small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 630px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topNav {
+    flex-flow: column;
+  }
+
+  .topNav a:not(:first-child) {
+    display: none;
+  }
+  .topNav a.icon {
+    display: block;
+  }
+  .topNav.responsive {
+    position: relative;
+  }
+  .topNav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topNav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  header .buttons {
+    display: none;
   }
 }
 
@@ -77,12 +138,15 @@ header .buttons button {
 main {
   display: grid;
   width: 100%;
-  padding-top: 100px;
+  margin-top: 100px;
   grid-template: repeat(9, 100px) / repeat(12, 1fr);
   grid-column-gap: 10px;
 }
 
 @media only screen and (max-width: 620px) {
+  main {
+    grid-template: repeat(9, 100px) / 1fr;
+  }
 }
 
 /* Banner Section */
@@ -99,6 +163,10 @@ main {
 
 .stats {
   grid-area: 5 / 1 / span 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: rgb(197, 223, 51);
 }
 
@@ -109,6 +177,15 @@ main {
   display: grid;
   grid-template-areas: "whoIs howTo";
   grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 620px) {
+  .info {
+    grid-template: 1fr 1fr / 1fr;
+    grid-template-areas:
+      "whoIs"
+      "howTo";
+  }
 }
 
 .infoPanel {
@@ -141,7 +218,17 @@ main {
 
 @media only screen and (max-width: 768px) {
   .infoPanel h1 {
-    font-size: 5vw;
+    font-size: 38px;
+  }
+
+  .infoPanel p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .infoPanel h1 {
+    font-size: 32px;
   }
 
   .infoPanel p {
@@ -153,6 +240,10 @@ main {
 
 .path {
   grid-area: 9 / 1 / span 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: grey;
 }
 

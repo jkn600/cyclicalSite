@@ -17,6 +17,9 @@
     <!-- Styles.css -->
     <link href="./resources/css/styles.css" type="text/css" rel="stylesheet">
 
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -30,13 +33,16 @@
 
   <body>
     <!-- Header & Navigation -->
-    <header>
-      <nav>
-        <a href="#">UKGL</a>
+    <header id="header">
+      <nav class="topNav" id="navBar">
+        <a href="#" class="active">HOME</a>
         <a href="#">ABOUT</a>
         <a href="#">TOURNAMENTS</a>
         <a href="#">INSIDE CYCLICAL</a>
         <a href="#">DISCORD</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
       <div class="header-logo">
         <a href="#"><img src="./resources/images/newLogo.png"></a>
@@ -57,7 +63,7 @@
 
       <!-- Stats -->
       <section class="stats">
-        
+        <h1>PLACEHOLDER TEXT (SOME COOL STUFF)</h1>
       </section>
 
       <!-- Info -->
@@ -74,10 +80,11 @@
 
       <!-- Path -->
       <section class="path">
+        <h1>EXACTLY HOW WE ARE GOING TO TAKE YOU THERE</h1>
       </section>
     </main>
 
-    <script type="text/javascript">
+    <script src="/resources/js/script.js" type="text/javascript">
     </script>
   </body>
 </html>
