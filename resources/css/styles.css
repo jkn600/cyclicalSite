@@ -106,16 +106,20 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
-.info h1 {
-    font-size: 38px;
-    font-weight: 800;
-}
-
 .infoPanel {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     padding: 20px;
+}
+
+.infoPanel h1 {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.infoPanel p {
+    font-size: 16px;
 }
 
 #whoIs {
@@ -129,8 +133,12 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
-    #whoIs h1 {
+    .infoPanel h1 {
         font-size: 5vw;
+    }
+
+    .infoPanel p {
+        font-size: 14px;
     }
 }
 
