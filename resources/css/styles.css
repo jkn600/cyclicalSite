@@ -25,6 +25,7 @@ header {
   justify-items: center;
   position: fixed;
   top: 0;
+  transition: height 1s;
   z-index: 10;
 }
 
