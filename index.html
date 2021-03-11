@@ -84,7 +84,20 @@
       </section>
     </main>
     
-    <script src="/resources/js/script.js" type="text/javascript">
+    <script type="text/javascript">
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+
+      $('#expandMenu').on('click touch', () => {
+        var x = document.getElementById("navBar");
+          var y = document.getElementById("header");
+          if (x.className === "topNav") {
+            x.className += " responsive";
+            y.style.height = "200px";
+          } else {
+            x.className = "topNav";
+            y.style.height = "100px";
+          }
+      });
     </script>
 
   </body>
