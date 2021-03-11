@@ -1,7 +1,7 @@
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 
-$('#expandMenu').on('click', () => {
+$('#expandMenu').on('click touch', () => {
   var x = document.getElementById("navBar");
     var y = document.getElementById("header");
     if (x.className === "topNav") {
