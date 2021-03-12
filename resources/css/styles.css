@@ -106,7 +106,9 @@ small screens (display the links vertically instead of horizontally) */
   }
 
   .topNav {
+    padding-top: 17px;
     flex-flow: column;
+    justify-content: flex-start;
   }
 
   .topNav a:not(:first-child) {
@@ -119,9 +121,6 @@ small screens (display the links vertically instead of horizontally) */
     position: relative;
   }
   .topNav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
   }
   .topNav.responsive a {
     float: none;
