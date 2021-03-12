@@ -3,13 +3,32 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
-  font-family: "Baloo Tammudu 2", cursive !important;
+  font-family: 'Montserrat', sans-serif !important;
   background-color: black;
+}
+
+h1, h2, p {
+  display: inline-block;
 }
 
 h1 {
     font-size: 1.5em;
+    font-weight: 900;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+p {
+  font-weight: 550;
 }
 
 /* Header Section */
@@ -41,6 +60,7 @@ header .header-logo {
 header .header-logo img {
   width: auto;
   height: 3em;
+  transition: height 1s;
 }
 
 .topNav {
@@ -105,8 +125,12 @@ small screens (display the links vertically instead of horizontally) */
     grid-template-columns: 1fr 1fr;
   }
 
+  header .header-logo {
+    margin-left: 0;
+  }
+
   .topNav {
-    padding-top: 17px;
+    padding-top: 20px;
     flex-flow: column;
     justify-content: flex-start;
   }
@@ -115,17 +139,18 @@ small screens (display the links vertically instead of horizontally) */
     display: none;
   }
   .topNav a.icon {
+    margin-top: 10px;
     display: block;
   }
   .topNav.responsive {
     position: relative;
   }
-  .topNav.responsive a.icon {
-  }
+
   .topNav.responsive a {
     float: none;
     display: block;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   header .buttons {
@@ -137,10 +162,13 @@ small screens (display the links vertically instead of horizontally) */
 
 main {
   display: grid;
+  position: relative;
   width: 100%;
-  margin-top: 100px;
+  max-width: 1180px;
+  margin: 100px auto 0 auto;
   grid-template: repeat(9, 100px) / repeat(12, 1fr);
   grid-column-gap: 10px;
+  background-color: white;
 }
 
 @media only screen and (max-width: 620px) {
@@ -153,10 +181,42 @@ main {
 
 .banner {
   grid-area: 1 / 1 / span 4 / -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../images/newbanner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.banner a {
+  text-decoration: none;
+  color: white;
+}
+
+.banner > .bannerTint {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  background-color: rgba(12, 13, 22, 0.75);
+
+}
+
+.banner .start {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(46, 49, 146);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
 /* Stats */
@@ -168,6 +228,7 @@ main {
   justify-content: center;
   text-align: center;
   background-color: rgb(197, 223, 51);
+  z-index: 2;
 }
 
 /* Info */
@@ -177,6 +238,7 @@ main {
   display: grid;
   grid-template-areas: "whoIs howTo";
   grid-template-columns: 1fr 1fr;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 620px) {
@@ -197,7 +259,8 @@ main {
 
 .infoPanel h1 {
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
 
 .infoPanel p {
@@ -216,19 +279,9 @@ main {
   color: #2e3192;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .infoPanel h1 {
-    font-size: 38px;
-  }
-
-  .infoPanel p {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .infoPanel h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .infoPanel p {
@@ -245,6 +298,27 @@ main {
   justify-content: center;
   text-align: center;
   background-color: grey;
+  z-index: 2;
 }
 
 /* ... */
+
+/* Footer */
+
+footer {
+  grid-area: 10 / 1 / span 1 / -1;
+  height: 50px;
+  display: flex;
+  background-color: #2e3192;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  z-index: 10;
+}
+
+footer p {
+  margin: 10px 0;
+  font-weight: 300;
+  color: white;
+}

@@ -10,7 +10,7 @@
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700;900&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
 
@@ -45,7 +45,7 @@
         </a>
       </nav>
       <div class="header-logo">
-        <a href="#"><img src="./resources/images/newLogo.png"></a>
+        <a href="#"><img src="./resources/images/newLogo.png" id="homeLogo"></a>
       </div>
       <div class="buttons">
         <button>LOG IN</button>
@@ -58,12 +58,17 @@
 
       <!-- Banner -->
       <section class="banner">
+        <!-- Banner Overlay Tint-->
+        <div class="bannerTint"></div>
 
+        <div class="start">
+          <h2><a href="#">Start Now</a></h2>
+        </div>
       </section>
 
       <!-- Stats -->
       <section class="stats">
-        <h1>PLACEHOLDER TEXT (SOME COOL STUFF)</h1>
+        <h2></h2>
       </section>
 
       <!-- Info -->
@@ -80,8 +85,13 @@
 
       <!-- Path -->
       <section class="path">
-        <h1>EXACTLY HOW WE ARE GOING TO TAKE YOU THERE</h1>
+        <h2></h2>
       </section>
+      
+      <!-- Footer -->
+      <footer>
+        <p>&copy; Cyclical LTD 2021</p>
+      </footer>
     </main>
     
     <script type="text/javascript">
@@ -90,15 +100,17 @@
       $('#expandMenu').on('click touch', () => {
         var x = document.getElementById("navBar");
           var y = document.getElementById("header");
+          var z = document.getElementById('homeLogo');
           if (x.className === "topNav") {
             x.className += " responsive";
-            y.style.height = "200px";
+            y.style.height = '250px';
+            z.style.height = '6em';
           } else {
             x.className = "topNav";
             y.removeAttribute('style');
+            z.removeAttribute('style');
           }
       });
     </script>
-
   </body>
 </html>
