@@ -61,25 +61,51 @@
         <!-- Banner Overlay Tint-->
         <div class="bannerTint"></div>
 
+        <div class="img-slide-container">
+          <div>
+            <img src="./resources/images/bannerimg1.jpg">
+          </div>
+          <div>
+            <img src="./resources/images/bannerimg4.jpg">
+          </div>
+          <div>
+            <img src="./resources/images/bannerimg6.jpg">
+          </div>
+          <div>
+            <img src="./resources/images/bannerimg3.jpg">
+          </div>
+          <div>
+            <img src="./resources/images/bannerimg7.jpg">
+          </div>
+          <div>
+            <img src="./resources/images/bannerimg2.jpg">
+          </div>
+          <div>
+            <img src="./resources/images/bannerimg5.jpg">
+          </div>
+        </div>
+
         <div class="start">
-          <h2><a href="#">Start Now</a></h2>
+          <h1>THE UK HOME OF GRASSROOTS ESPORTS</h1>
         </div>
       </section>
 
       <!-- Stats -->
       <section class="stats">
-        <h2></h2>
+        <div>
+          <p>OUR MISSION TO LEVEL UP ESPORTS IN THE UK FOCUSES ON 2 MAIN AREAS:</p>
+        </div>
       </section>
 
       <!-- Info -->
       <section class="info">
         <article class="infoPanel" id="whoIs">
-          <h1>Who are Cyclical?</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam quam. Nunc ultrices sem sit amet nunc porta viverra.</p>
+          <h1>COMPETITION</h1>
+          <p>For those who wish to compete more and enjoy being around a community of gamers, we strive to bring top notch events for you to test your skills against the best!</p>
         </article>
         <article class="infoPanel" id="howTo">
-          <h1>How to Play:</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam quam. Nunc ultrices sem sit amet nunc porta viverra.</p>
+          <h1>CAREER</h1>
+          <p>For those who dream of a career one day in esports, our aim is to break down barriers and increase accessibility to the industry as a whole, in order to build the bridge between the aspiring professional and the start of their career.</p>
         </article>
       </section>
 
@@ -95,21 +121,36 @@
     </main>
     
     <script type="text/javascript">
-      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      $(function() {
+        
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 
-      $('#expandMenu').on('click touch', () => {
-        var x = document.getElementById("navBar");
-          var y = document.getElementById("header");
-          var z = document.getElementById('homeLogo');
-          if (x.className === "topNav") {
-            x.className += " responsive";
-            y.style.height = '250px';
-            z.style.height = '6em';
-          } else {
-            x.className = "topNav";
-            y.removeAttribute('style');
-            z.removeAttribute('style');
-          }
+        $('#expandMenu').on('click touch', () => {
+          var x = document.getElementById("navBar");
+            var y = document.getElementById("header");
+            var z = document.getElementById('homeLogo');
+            if (x.className === "topNav") {
+              x.className += " responsive";
+              y.style.height = '250px';
+              z.style.height = '6em';
+            } else {
+              x.className = "topNav";
+              y.removeAttribute('style');
+              z.removeAttribute('style');
+            }
+        });
+
+        //Banner Slideshow
+        $(".img-slide-container > div:gt(0)").hide();
+
+        setInterval(() => {
+          $('.img-slide-container > div:first')
+            .fadeOut(2000)
+            .next()
+            .fadeIn(2000)
+            .end()
+            .appendTo('.img-slide-container');
+        }, 6000);
       });
     </script>
   </body>
