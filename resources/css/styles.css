@@ -351,20 +351,49 @@ main {
   justify-content: center;
   text-align: center;
   color: white;
-  background-color: gray;
   padding: 50px;
   z-index: 2;
 }
 
 .path h1 {
-  font-size: 5rem;
-  margin: 20px;
+  font-size: 3rem;
+  margin: 50px 0 50px 0;
+}
+
+.path h1:not(:first-child) {
+  margin-top: 100px;
+}
+
+.path h2 {
+  margin-top: 5%;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #26cdff;
+}
+
+@media only screen and (max-width: 681px) {
+  .path h1 {
+    margin: 50px 0 50px 0;
+  }
+
+  .path h1:not(:first-child) {
+    margin-top: 50px;
+  }
 }
 
 .path .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  background-color: white;
   height: 0;
+  padding-bottom: 56.25%;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 20px 8px rgba(38, 205, 255, 0.3);
+  -moz-box-shadow: 0px 0px 20px 8px rgba(38, 205, 255, 0.3);
+  box-shadow: 0px 0px 20px 8px rgba(38, 205, 255, 0.3);
+}
+
+.path .video-container:last-child {
+  margin-bottom: 50px;
 }
 
 .path .video-container iframe {
