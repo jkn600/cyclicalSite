@@ -201,12 +201,13 @@ main {
 
 .banner h1 {
   font-size: 3em;
+  padding: 0 30px;
   text-align: center;
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 620px) {
   .banner h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 
