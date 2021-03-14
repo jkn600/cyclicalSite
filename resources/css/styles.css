@@ -8,17 +8,19 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   background-color: #0c0d16;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   display: inline-block;
 }
 
 h1 {
-    font-size: 1.5em;
-    font-weight: 900;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 
 h2 {
@@ -171,7 +173,10 @@ main {
   width: 100%;
   max-width: 1180px;
   margin: 100px auto 0 auto;
-  grid-template: repeat(4, 150px) repeat(5, minmax(100px, auto)) / repeat(12, 1fr);
+  grid-template: repeat(4, 150px) repeat(5, minmax(100px, auto)) / repeat(
+      12,
+      1fr
+    );
   grid-column-gap: 10px;
 }
 
@@ -216,7 +221,6 @@ main {
   overflow: auto;
   background-color: rgba(12, 13, 22, 0.75);
   z-index: 1;
-
 }
 
 .banner .start {
