@@ -39,7 +39,7 @@
         <a href="#">ABOUT</a>
         <a href="#">TOURNAMENTS</a>
         <a href="#">INSIDE CYCLICAL</a>
-        <a href="#">DISCORD</a>
+        <a href="https://discord.gg/9ubtcwJSsC" target="_blank">DISCORD</a>
         <a href="javascript:void(0);" class="icon" id="expandMenu">
           <i class="fa fa-bars"></i>
         </a>
@@ -120,9 +120,19 @@
         </div>
       </section>
       
+      <!-- Pop up box -->
+      <div id="popup-box">
+        <h2>Sign up for our newsletter</h2>
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
       <!-- Footer -->
       <footer>
-        <p>&copy; Cyclical LTD 2021</p>
+        <p>&copy; Cyclical LTD 2023</p>
       </footer>
     </main>
     
@@ -157,6 +167,38 @@
             .end()
             .appendTo('.img-slide-container');
         }, 6000);
+      });
+    </script>
+
+    <script type="text/javascript">
+		var popupBox = document.getElementById("popup-box");
+
+      /*
+      // Add event listener for mouseout
+      document.addEventListener("mouseout", function (e) {
+        // Check if the mouse is outside of the page window
+        if (e.clientY <= 0 || e.clientX <= 0 || (e.clientX >= window.innerWidth || e.clientY >= window.innerHeight)) {
+          popupBox.style.display = "block";
+        }
+      });*/
+
+      /*$(document).on("mouseenter", function () {
+          popupBox.style.display = "none";
+        });~*/
+
+      //jQuery function for mouseout
+      $(document).one("mouseleave", function (){
+        if (popupBox.style.display === "none") {
+          popupBox.style.display = "block";
+        }
+      });
+
+      // Add event listener for form submit
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = document.getElementById("email").value;
+        alert("Thank you for signing up for our newsletter!");
+        popupBox.style.display = "none";
       });
     </script>
   </body>
